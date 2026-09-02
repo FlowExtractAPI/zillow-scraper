@@ -81,9 +81,15 @@ Type a location. That is the whole setup. You get back every matching listing as
 
 ### Filters — all optional
 
-Price (`minPrice`, `maxPrice`), bedrooms (`minBeds`, `maxBeds`), bathrooms (`minBaths`, `maxBaths`), interior size (`minSqft`, `maxSqft`), lot size (`minLotSize`, `maxLotSize`), year built (`minYearBuilt`, `maxYearBuilt`), `maxHoaFee`, `homeTypes`, `keywords`, `sortBy`, `has3dTour`, `openHousesOnly`, and for-sale toggles `foreclosure`, `auction`, `comingSoon`, `agentListed`, `ownerPosted`, `newConstruction`.
+**Size and price** — `minPrice`, `maxPrice`, `minBeds`, `maxBeds`, `minBaths`, `maxBaths`, `minSqft`, `maxSqft`, `minLotSize`, `maxLotSize`, `minYearBuilt`, `maxYearBuilt`, `maxHoaFee`
 
-Leave anything blank to skip it. For rentals and sold searches, the for-sale-only toggles are ignored.
+**Property** — `homeTypes`, `hasPool`, `hasAirConditioning`, `isWaterfront`, `singleStory`, `hasGarage`, `minParkingSpots`, `has3dTour`
+
+**Listing** — `keywords`, `sortBy`, `listedWithin`, `openHousesOnly`, `includePending`, and the for-sale toggles `foreclosure`, `auction`, `agentListed`, `ownerPosted`, `newConstruction`
+
+Leave anything blank to skip it. A few filters only apply to certain markets and are ignored elsewhere: the for-sale toggles, `minParkingSpots`, and `includePending` apply to for-sale searches, not rentals.
+
+Every filter here is checked against live results before release — a control that does not measurably change what comes back is not shipped.
 
 ### Advanced
 
